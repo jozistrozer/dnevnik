@@ -1,9 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 
-html {
+* {
     font-family: 'Dosis', sans-serif;
 }
 
 p {
-    font-size: 20px
+    font-size: 15px
+}
+
+.pnlNavigation {
+    display: flex;
+    justify-content: center;
+}
+
+.pnlMain {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 25px;
+}
+
+#txtareaDnevnik {
+    width: 600px;
+    height: 550px;
+    resize: none;
+}
+
+#pnlFooter {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    border: 4px solid #5c5c5c;
+    height: 50px;
+    background-color: #333333;
+    text-align: center;
+    align: center;
+}
+
+#pnlFooter > * {
+    color: white;
+}
+
+#pnlFooter, span:hover {
+    color: #d4d4d4;
+    cursor: pointer;
 }
