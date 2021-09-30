@@ -1,0 +1,3 @@
+function Klik() {
+    eel.funFunkcija();
+}
