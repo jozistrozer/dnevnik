@@ -12,19 +12,30 @@
     <script type="text/javascript" src="/eel.js"></script>
     <script src="js/main.js"></script>
 </head>
-<body>
+<body onload="funKontrolaDatuma()">
     <div class="pnlNavigation">
         <img src="res/logo.gif" width="20%" height="20%">
     </div>
 
     <div class="pnlMain">
-        <h3>30.09.2021</h3>
-        <textarea id="txtareaDnevnik"></textarea>
-        <button class="btn btn-primary" type="submit">Dodaj</button>
+        <h3 id="idDanasnjiDatum">danasnji_datum</h3>
+        <div id="idObstaja" style="display: none;">
+            <h1>Dnevnik za danes že obstaja!</h1>
+            <button type="button" onclick="funOdpriDnevnik();">Poglej dnevnik.</button>
+        </div>
+
+        <div id="idDodajDnevnik">
+            <textarea id="txtareaDnevnik"></textarea> <br>
+            <button id="idGumbDodaj" class="btn btn-primary" onclick="funDodajDnevnik();">Dodaj</button>
+        </div>
     </div>
 
     <div id="pnlFooter">
         <p><span id="lnkDodaj">Dodaj</span> • <span id="lnkDnevnik">Dnevnik</span> • <span id="lnkPDF">PDF</span> • <span id="lnkMe">Jože Strožer</span></p>
     </div>
 </body>
+    <script>
+        // Prikaz današnjega datuma.
+        document.getElementById("idDanasnjiDatum").innerHTML = new Date().toLocaleDateString('sl-SI');
+    </script>
 </html>

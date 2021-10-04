@@ -1,4 +1,5 @@
 import pickle
+from datetime import datetime
 
 
 def funDodajDnevnik(datum, vsebina):
@@ -29,3 +30,17 @@ def funVrniVse():
             return output
     except Exception as ex:
         print("Error: ", ex)
+
+
+def funObstajaDanes():
+    dnevniki = funVrniVse()
+    varObstaja = False
+
+    varDate = datetime.now()
+    varDanasnjiDatum = ("%d.%d.%d"%(varDate.day, varDate.month, varDate.year)).replace(".", "")
+
+    for dnevnik in dnevniki:
+        if dnevnik[0] == varDanasnjiDatum:
+            varObstaja = True
+
+    return varObstaja
