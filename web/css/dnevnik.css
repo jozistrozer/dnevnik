@@ -1,0 +1,46 @@
+.pnlMainDnevnik {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.tabList {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 10%;
+    height: 55px;
+    line-height: 55px;
+    cursor: pointer;
+}
+
+.tabList > * {
+    font-weight: bold;
+    text-align: center;
+}
+
+.tabList:hover {
+    background-color: #f7f7f7;
+}
+
+.pnlModalOkno {
+    display: none;
+    position: relative;
+    width: 50%;
+    height: 650px;
+    left: 25%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid black;
+    z-index: 1000;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.vsebina {
+    margin-left: 25px;
+}
+
+.vsebina > p {
+    font-size: 18px;
+}

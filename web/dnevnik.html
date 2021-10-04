@@ -7,19 +7,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dnevnik.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="/eel.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/dnevnik.js"></script>
 </head>
-<body>
+<body onload="funNaloziDnevnik();">
     <div class="pnlNavigation">
         <img src="res/logo.gif" width="20%" height="20%">
     </div>
+    <div id="idDnevnik" class="pnlMainDnevnik"></div>
 
-    <div class="pnlMainDnevnik">
-        <div>
-
+    <div id="idModalOkno" class="pnlModalOkno">
+        <span style="font-size: 35px; float: right; margin-right: 25px;" onclick="funZapriDnevnik();">&times;</span>
+        <h1 id="idModalDatum" style="margin-left: 25px;"></h1>
+        <hr>
+        <div class="vsebina">
+            <p id="idModalVsebina"></p>
         </div>
     </div>
 
