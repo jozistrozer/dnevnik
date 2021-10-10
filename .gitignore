@@ -1,3 +1,5 @@
 venv/
 .idea/
 podatki/
+data.pickle
+__pycache_/
