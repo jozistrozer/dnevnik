@@ -1,5 +1,6 @@
 import eel
 import podatki
+import izvoz
 
 eel.init('web')
 
@@ -16,8 +17,11 @@ def funObstajaDanes():
 
 @eel.expose
 def funDodajDnevnik(datum, vsebina):
-    print(datum, vsebina)
     podatki.funDodajDnevnik(datum, vsebina)
+
+@eel.expose
+def funIzvoziDnevnik(ime):
+    izvoz.funUstvariHTML(ime)
 
 
 eel.start('index.html')

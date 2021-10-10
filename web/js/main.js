@@ -8,12 +8,12 @@ $(document).ready(function(){
         location.href = "dnevnik.html";
     });
 
-    $("#lnkPDF").click(function(){
-        location.href = "generatePdf.html";
+    $("#lnkIzvoz").click(function(){
+        location.href = "izvozDnevnika.html";
     });
 
     $("#lnkMe").click(function(){
-    window.open('https://github.com/jozistrozer', '_blank');
+        window.open('https://github.com/jozistrozer', '_blank');
     });
 });
 
@@ -32,9 +32,6 @@ function funOdpriDnevnik() {
 function funDodajDnevnik() {
     var datum = (document.getElementById("idDanasnjiDatum").textContent).replace(/\s/g, '');
     var vsebina = document.getElementById("txtareaDnevnik").value;
-
-    console.log(datum);
-    console.log(vsebina);
 
     eel.funDodajDnevnik(datum, vsebina);
 

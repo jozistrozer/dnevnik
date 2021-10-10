@@ -11,14 +11,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="/eel.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/izvoz.js"></script>
 </head>
-<body onload="funKontrolaDatuma()">
+<body>
     <div class="pnlNavigation">
         <img src="res/logo.gif" width="20%" height="20%">
     </div>
 
     <div class="pnlMain">
-        <h3>:D</h3>
+        <h3>Vnesi ime dnevnika</h3>
+        <input type="text" id="txtImeDatoteke">
+        <button type="button" id="btnIzvoz" class="btn btn-primary" onclick="funIzvoz()">Izvozi dnevnik</button>
+        <div id="txtError" style="display:none;font-color:red;"></div>
     </div>
 
     <div id="pnlFooter">
